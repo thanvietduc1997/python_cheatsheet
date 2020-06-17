@@ -29,8 +29,12 @@ img_bin_np = bytearray(img_bin)
 img_bin_np = np.asarray(img_bin_np)
 # retrieve the image
 img = cv2.imdecode(img_bin_np, flags=cv2.IMREAD_COLOR)
+```
 
-# we can achieve this the second way by following
+We can achieve this the second way by doing as follow
+
+```Python
+
 import cv2
 import base64
 import imageio
