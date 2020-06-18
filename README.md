@@ -8,9 +8,12 @@
 import cv2
 import base64
 
-img = cv2.imread('demo.jpg') # img is np.ndarray
+# img is np.ndarray
+fp = 'demo.jpg'
+ext = '.'+fp.split('.')[-1]
+img = cv2.imread(fp)
 # retval is True, buffer is np.ndarray of bytes
-retval, buffer = cv2.imencode('.jpg', img)
+retval, buffer = cv2.imencode(ext, img)
 # img_base64 is base64 string
 img_base64 = base64.b64encode(buffer)
 ```
